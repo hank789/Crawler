@@ -16,7 +16,7 @@
 			
 			public function find_by_post_date($date) {
 				$sql = "SELECT * FROM " . $this->table ." WHERE link_post_date >= :link_post_date order by link_post_date asc";
-				return $this->db->row($sql,array('link_post_date'=>$date));
+				return $this->db->query($sql,array('link_post_date'=>$date));
 			}
 			
 	}
